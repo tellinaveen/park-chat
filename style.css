@@ -1,0 +1,121 @@
+body {
+    font-family: sans-serif;
+    background: #e9f5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#messages {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#input {
+    width: 70%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#sendBtn {
+    padding: 8px 12px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#inputwrapper{
+    display: flex;
+    align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding: 0 10px;
+}
+.hidden {
+    display: none;
+}
+#intro p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#startBtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+}
+
+#startBtn.enabled {
+    cursor: pointer;
+    opacity: 1;
+}
+/* Chat message styles */
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 300px;
+    /* Set a fixed height for the message container */
+}
+
+#messages div {
+    max-width: 80%;
+    /* Limit width of messages */
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Style for sender's messages (on the right) */
+#messages .sender {
+    background-color: #d1f7c4;
+    /* Light green */
+    align-self: flex-end;
+    /* Align to the right */
+}
+
+/* Style for receiver's messages (on the left) */
+#messages .receiver {
+    background-color: #f0f0f0;
+    /* Light grey */
+    align-self: flex-start;
+    /* Align to the left */
+}
+.exit-button {
+    margin: 15px auto 0;
+    display: block;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.exit-button:hover {
+    background-color: #d32f2f;
+}

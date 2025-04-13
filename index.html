@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Park Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌳 Park Chat</h1>
+
+        <!-- Intro Screen -->
+        <div id="intro">
+            <p>Welcome to Park Chat! You’ll be randomly connected with someone inside the park to chat in real-time.</p>
+            <p>We are here to connect people and make this park <b>friendly</b></p>
+            <label>
+                <input type="checkbox" id="privacyCheck" />
+                I understand this is anonymous. We don’t store your data and  don’t share personal info.
+            </label>
+            <br /><br />
+            <button id="startBtn" disabled>Start Chat</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="status" class="hidden">Connecting...</div>
+        <div id="chatbox" class="hidden">
+            <div id="messages"></div>
+            <div id="inputwrapper">
+            <input id="input" type="text" placeholder="Type your message..." />
+            <button id="sendBtn">Send</button>
+            </div>
+            <button id="exitBtn" class="exit-button">Exit Chat</button>
+        </div>
+        <div id="disconnected" class="hidden">Your chat partner disconnected.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
